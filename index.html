@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 Dynamic Kanban Board</h1>
+      <p>Organize your tasks with drag & drop functionality</p>
+    </div>
+
+    <div class="task-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="taskTitle">Task Title</label>
+          <input type="text" id="taskTitle" placeholder="Enter task title..." required>
+        </div>
+        <div class="form-group">
+          <label for="taskDescription">Description</label>
+          <textarea id="taskDescription" placeholder="Enter task description..."></textarea>
+        </div>
+        <button class="add-btn" id="addTaskBtn">+ Add Task</button>
+      </div>
+    </div>
+
+    <div class="kanban-board">
+      <div class="column" data-status="todo">
+        <div class="column-header todo-header">📋 To Do</div>
+        <div class="task-list" id="todo-tasks"></div>
+      </div>
+      <div class="column" data-status="progress">
+        <div class="column-header progress-header">⚡ In Progress</div>
+        <div class="task-list" id="progress-tasks"></div>
+      </div>
+      <div class="column" data-status="done">
+        <div class="column-header done-header">✅ Done</div>
+        <div class="task-list" id="done-tasks"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
